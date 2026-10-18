@@ -1,0 +1,10 @@
+# Engineering Reflection
+
+### 1. Most Difficult Concept & How I Overcame It
+The most challenging concept in this course was **managing concurrency and state consistency in distributed environments**—specifically transitioning from single-threaded client scripting to handling asynchronous race conditions, database transaction isolation levels, and eventual consistency between caches and read replicas. Early on, it was easy to underestimate edge cases where simultaneous requests attempt to mutate the same resource. I overcame this challenge by mapping out full request lifecycles visually, implementing conditional atomic updates (`UPDATE ... WHERE status = 'available'`), practicing optimistic locking patterns, and writing integration tests that deliberately simulate concurrent requests to prove zero double-allocation.
+
+### 2. Capstone Improvements Based on Feedback
+Reflecting on my QuickNotes capstone project, the primary area I would enhance is the **caching invalidation strategy and search architecture**. While the initial design utilized basic Cache-Aside with Redis, rapid note updates across multiple devices could result in brief cache desynchronization. Based on feedback, I would implement **event-driven cache invalidation using Redis Streams** paired with a dedicated full-text search engine (such as Elasticsearch or OpenSearch). This would replace relational `LIKE` queries with inverted-index searches, enabling typo tolerance, fuzzy keyword matching, and multi-tag filtering at scale without straining relational database buffer pools.
+
+### 3. What I Will Learn Next
+Moving forward, my next learning objective is mastering **container orchestration with Kubernetes and distributed streaming pipelines using Apache Kafka**. As applications scale to millions of concurrent users, understanding how to automate blue-green zero-downtime deployments, manage stateful service sets, and partition high-throughput event logs will empower me to architect enterprise-grade backend infrastructure capable of handling global traffic surges effortlessly.
