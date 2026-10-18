@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 5 - Users Directory</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="users.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>User Directory</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls-section">
+        <div class="actions-row">
+          <button id="load-users" type="button">Load Users</button>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-input">Filter by name:</label>
+          <input
+            type="text"
+            id="filter-input"
+            placeholder="Type a name to filter..."
+          />
+        </div>
+
+        <p id="status"></p>
+      </section>
+
+      <section class="results-section">
+        <ul id="users-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Web Foundations - Day 5</p>
+    </footer>
+  </body>
+</html>
