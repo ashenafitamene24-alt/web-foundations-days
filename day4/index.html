@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 4 - Note Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>QuickNotes Editor</h1>
+        <button id="theme-toggle" type="button">Dark mode</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="editor-section">
+        <label for="note-text">Write your note:</label>
+        <textarea
+          id="note-text"
+          placeholder="Type your note here..."
+          rows="8"
+        ></textarea>
+
+        <div class="stats-container">
+          <p id="char-count">0 / 200 characters</p>
+          <p id="word-count">0 words</p>
+        </div>
+
+        <div class="actions-container">
+          <button id="clear-btn" type="button">Clear</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Web Foundations - Day 4</p>
+    </footer>
+  </body>
+</html>
